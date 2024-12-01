@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+/*header style*/
+header {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1.25rem;
+    margin: 1.875rem;
+    padding: 2rem;
+    border: black 1px solid;
+    justify-content: space-between;
+}
+.header-left, .header-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.header-right {
+    justify-content: flex-end;
+}
+.header-intro {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* 主内容区样式调整 */
+main {
+    margin: 0 1.875rem;
+}
+section {
+    border: black 1px solid;
+    padding: 1rem;
+}   
+.reviews {
+    border: black 1px solid;
+    margin: 1.875rem 0
+}
+.reviews > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    gap: 1rem;
+}
+blockquote {
+    border: black 1px solid;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+
+/* 网格系统基础设置 */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.9375rem;
+}
+
+.col {
+    padding: 0.9375rem;
+    width: 100%;    /* 移动端默认占满 */
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 320px) {
+    /* 小型手机 */
+    .col {
+        width: 100%;
+    }
+    .header-left, .header-right{
+        gap: 0.5rem;
+        justify-content: center;
+    }
+    .header-intro {
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    /* 平板设备 */
+    .col-4 {
+        width: 100%;
+    }
+    /* 恢复header两侧的原始样式 */
+    .header-left {
+        gap: 1rem;
+        justify-content: flex-start;
+    }
+    .header-right {
+        gap: 1rem;
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* 桌面设备 */
+    .col-4 {
+        width: 33.333333%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    /* 大屏设备 */
+   
+}
+
+
