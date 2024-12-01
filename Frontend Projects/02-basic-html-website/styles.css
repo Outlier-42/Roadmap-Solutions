@@ -1,0 +1,253 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 头部样式 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-left img {
+    width: 40px;
+    height: 40px;
+    background: #000;
+}
+
+.header-left span {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-right a {
+    text-decoration: none;
+    color: #000;
+}
+
+.header-right span {
+    color: #000;
+}
+
+/* 主要内容样式 */
+main h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;  /* 文本居中对齐 */
+}
+
+main > p {
+    color: #666;
+    margin-bottom: 50px;
+    text-align: center;  /* 文本居中对齐 */
+}
+
+/* 三列布局 */
+main > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 30px;
+}
+
+/* 项目列表样式 */
+section h2 {
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+}
+
+section ul {
+    list-style: none;
+}
+
+section ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* 工作经验样式 */
+article {
+    margin-bottom: 30px;
+}
+
+article h3 {
+    margin-bottom: 10px;
+}
+
+article a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+/* 教育部分样式 */
+.education p {
+    margin-bottom: 20px;
+}
+
+/* 评价部分样式 */
+.reviews {
+    margin-bottom: 50px;
+}
+
+.reviews h2 {
+    margin-bottom: 30px;
+}
+
+.reviews > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+blockquote {
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+blockquote p {
+    margin-bottom: 15px;
+}
+
+blockquote footer p:first-child {
+    color: #333;
+}
+
+blockquote footer p:last-child {
+    color: #666;
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav ul {
+    display: none;
+}
+
+/* 项目卡片样式 */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    border: 1px solid #000;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.project-card h2 {
+    margin-bottom: 15px;
+}
+
+.project-card ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+/* 文章列表样式 */
+.articles-list article {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.articles-list h2 {
+    margin-bottom: 10px;
+}
+
+.articles-list p {
+    margin-bottom: 15px;
+}
+
+/* 联系表单样式 */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.contact-info ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.contact-info li {
+    margin-bottom: 15px;
+}
+
+.contact-form form {
+    display: grid;
+    gap: 20px;
+}
+
+.contact-form div {
+    display: grid;
+    gap: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    opacity: 0.9;
+} 
