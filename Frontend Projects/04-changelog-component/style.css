@@ -1,0 +1,154 @@
+/*基础样式重置和容器样式*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body {
+    font-family:system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    color:#333;
+}
+
+.container {
+    max-width:800px;
+    margin:40px auto;
+    padding:40px;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+
+h1 {
+    font-size:48px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size:24px;
+    color: #666;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.changelog-timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.changelog-timeline::before {
+    content:'';
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 100%;
+    background-color: #e5e5e5;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.date {
+    width: 40%;
+    text-align: right;
+    padding-right: 30px;
+    color: #666;
+}
+
+.timeline-dot {
+    width: 12px;
+    height: 12px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.content {
+    width: 55%;
+    padding-left: 30px;
+}
+
+.content h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.cta-button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cta-button button {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button button:hover {
+    background: #333;
+}
+
+@media (max-width: 768px) {
+    .date {
+        width: 40%;
+    }
+    
+    .content {
+        width: 40%;
+    }
+    
+    h1 {
+        font-size: 36px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .changelog-timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 40px;
+    }
+    
+    .date {
+        width: 100%;
+        text-align: left;
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .timeline-dot {
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .content {
+        width: 100%;
+        padding-left: 0;
+    }
+}
